@@ -300,6 +300,35 @@ setTimeout(function() {
     }
 }, 500);
 
+// Mobile menu toggle
+document.addEventListener('DOMContentLoaded', () => {
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when clicking on a link
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!navToggle.contains(e.target) && !navLinks.contains(e.target)) {
+                navToggle.classList.remove('active');
+                navLinks.classList.remove('active');
+            }
+        });
+    }
+});
+
 // Console styling for branding
 console.log('%c🏢 MUDARTE.VIP ', 'background: linear-gradient(135deg, #c9a45c, #a88947); color: white; font-size: 24px; font-weight: bold; padding: 10px 20px; border-radius: 5px;');
 console.log('%cRelocalizaciones de Alta Gama', 'color: #c9a45c; font-size: 14px; font-weight: 600; letter-spacing: 2px;');
