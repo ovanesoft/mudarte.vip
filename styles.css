@@ -1805,7 +1805,7 @@ section {
 
 @media (max-width: 768px) {
     .contact-float-container {
-        bottom: 90px;
+        bottom: 120px;
         right: 20px;
     }
 

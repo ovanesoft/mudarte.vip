@@ -314,6 +314,23 @@ setTimeout(function() {
                 }, 200);
             });
         });
+
+        // Auto-open menu on page load to show users it exists
+        // Only do this once per session
+        if (!sessionStorage.getItem('contactMenuShown')) {
+            setTimeout(() => {
+                contactContainer.classList.add('active');
+                contactMenuToggle.classList.add('active');
+
+                // Auto-close after 3 seconds
+                setTimeout(() => {
+                    contactContainer.classList.remove('active');
+                    contactMenuToggle.classList.remove('active');
+                    // Mark as shown in this session
+                    sessionStorage.setItem('contactMenuShown', 'true');
+                }, 3000);
+            }, 1500); // Wait 1.5 seconds after page load
+        }
     }
 }, 500);
 
