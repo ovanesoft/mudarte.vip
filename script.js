@@ -75,6 +75,23 @@ if (contactForm) {
 
         console.log('Form submitted:', formData);
 
+        // Build WhatsApp message
+        let whatsappMessage = `Hola, soy ${formData.nombre}.\n\n`;
+        whatsappMessage += `Solicito una evaluación técnica para una relocalización ${formData.tipo}.\n\n`;
+        whatsappMessage += `📞 Teléfono: ${formData.telefono}\n`;
+        whatsappMessage += `📧 Email: ${formData.email}\n`;
+
+        if (formData.mensaje) {
+            whatsappMessage += `\n💬 Mensaje adicional:\n${formData.mensaje}`;
+        }
+
+        // WhatsApp number (same as the one used in other buttons)
+        const whatsappNumber = '5491133217972';
+        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+        // Open WhatsApp
+        window.open(whatsappUrl, '_blank');
+
         // Show success message
         showSuccessMessage();
 
