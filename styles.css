@@ -1480,6 +1480,12 @@ section {
 
     .trust-features {
         grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+
+    .trust-features .trust-item:nth-child(3) {
+        grid-column: 1 / -1;
+        max-width: 400px;
     }
 
     .process-step {
