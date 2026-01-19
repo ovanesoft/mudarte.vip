@@ -1237,6 +1237,14 @@ section {
     .module-icon i {
         font-size: 1.5rem;
     }
+
+    .training-cta .btn-primary {
+        display: block;
+        width: 100%;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 /* ========================================
