@@ -402,12 +402,12 @@ section {
 }
 
 .hero-logo {
-    margin-bottom: var(--spacing-sm);
+    margin-bottom: 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    padding: 3rem;
+    padding: 2rem;
 }
 
 .hero-logo::before {
@@ -438,7 +438,7 @@ section {
 }
 
 .hero-logo img {
-    max-width: 850px;
+    max-width: 950px;
     width: 100%;
     height: auto;
     filter: drop-shadow(0 10px 40px rgba(0, 0, 0, 0.3));
@@ -1549,8 +1549,13 @@ section {
         padding: 100px 0 60px;
     }
 
+    .hero-logo {
+        margin-bottom: 0.25rem;
+        padding: 1.5rem;
+    }
+
     .hero-logo img {
-        max-width: 350px;
+        max-width: 450px;
     }
 
     .hero-features {
