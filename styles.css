@@ -938,7 +938,7 @@ section {
 }
 
 .trust-item {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-lg) var(--spacing-xl);
     text-align: center;
     border: 1px solid var(--color-border);
     transition: var(--transition-smooth);
@@ -946,8 +946,8 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    min-height: 320px;
+    justify-content: center;
+    min-height: 240px;
 }
 
 .trust-item:hover {
@@ -957,16 +957,16 @@ section {
 }
 
 .trust-icon {
-    width: 80px;
-    height: 80px;
+    width: 70px;
+    height: 70px;
     background: linear-gradient(135deg, var(--color-accent-light), var(--color-accent));
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 1.75rem;
     color: white;
-    margin-bottom: var(--spacing-lg);
+    margin-bottom: var(--spacing-md);
     flex-shrink: 0;
     transition: var(--transition-smooth);
 }
@@ -977,19 +977,17 @@ section {
 
 .trust-item h4 {
     font-family: var(--font-serif);
-    font-size: 1.5rem;
-    margin-bottom: var(--spacing-md);
+    font-size: 1.375rem;
+    margin-bottom: var(--spacing-sm);
     color: var(--color-accent);
     flex-shrink: 0;
 }
 
 .trust-item p {
     color: var(--color-text-light);
-    font-size: 0.95rem;
-    line-height: 1.7;
-    flex-grow: 1;
-    display: flex;
-    align-items: center;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin: 0;
 }
 
 /* ========================================
@@ -1713,8 +1711,24 @@ section {
     }
 
     .trust-item {
-        min-height: 280px;
-        padding: var(--spacing-lg);
+        min-height: 220px;
+        padding: var(--spacing-md) var(--spacing-lg);
+    }
+
+    .trust-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .trust-item h4 {
+        font-size: 1.25rem;
+    }
+
+    .trust-item p {
+        font-size: 0.875rem;
+        line-height: 1.5;
     }
 
     .process-step {
