@@ -1247,6 +1247,150 @@ section {
     }
 }
 
+/* ===================================
+   Partner Brands Section
+   =================================== */
+
+.partner-brands {
+    padding: var(--spacing-2xl) 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+}
+
+.partner-card {
+    background: white;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+    padding: var(--spacing-2xl);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    position: relative;
+    overflow: hidden;
+}
+
+.partner-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-accent-dark));
+}
+
+.partner-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: var(--spacing-lg);
+}
+
+.partner-badge i {
+    font-size: 0.875rem;
+}
+
+.partner-content h3 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-md);
+    font-weight: 600;
+}
+
+.partner-description {
+    font-size: 1.125rem;
+    color: var(--color-text);
+    line-height: 1.7;
+    margin-bottom: var(--spacing-xl);
+}
+
+.partner-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-xl) 0;
+    margin: var(--spacing-lg) 0;
+    background: linear-gradient(135deg, #fafafa, #f5f5f5);
+    border-radius: 12px;
+    border: 1px solid #e8e8e8;
+}
+
+.partner-logo {
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-radius: 8px;
+}
+
+.partner-logo:hover {
+    transform: translateY(-2px);
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.partner-name {
+    font-family: var(--font-heading);
+    font-size: 1.375rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    display: block;
+}
+
+.partner-separator {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(180deg, transparent, var(--color-accent), transparent);
+}
+
+.partner-note {
+    font-size: 0.9375rem;
+    color: #666;
+    font-style: italic;
+    text-align: center;
+    margin-top: var(--spacing-md);
+}
+
+/* Partner Brands responsive */
+@media (max-width: 768px) {
+    .partner-card {
+        padding: var(--spacing-xl) var(--spacing-md);
+    }
+
+    .partner-content h3 {
+        font-size: 1.5rem;
+    }
+
+    .partner-description {
+        font-size: 1rem;
+    }
+
+    .partner-logos {
+        flex-direction: column;
+        gap: var(--spacing-md);
+        padding: var(--spacing-lg);
+    }
+
+    .partner-separator {
+        width: 40px;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--color-accent), transparent);
+    }
+
+    .partner-name {
+        font-size: 1.125rem;
+    }
+
+    .partner-note {
+        font-size: 0.875rem;
+    }
+}
+
 /* ========================================
    CTA SECTION
    ======================================== */
