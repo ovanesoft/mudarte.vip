@@ -922,6 +922,8 @@ section {
     text-align: center;
     border: 1px solid var(--color-border);
     transition: var(--transition-smooth);
+    text-decoration: none;
+    display: block;
 }
 
 .trust-item:hover {
@@ -959,53 +961,6 @@ section {
     color: var(--color-text-light);
     font-size: 0.95rem;
     line-height: 1.7;
-}
-
-/* Trust items that are clickable links */
-.trust-item-link {
-    text-decoration: none;
-    display: block;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.trust-item-link::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(201, 164, 92, 0.1), transparent);
-    transition: left 0.5s ease;
-}
-
-.trust-item-link:hover::before {
-    left: 100%;
-}
-
-.trust-item-link:hover {
-    border-color: var(--color-accent);
-    transform: translateY(-8px);
-    box-shadow: 0 20px 60px rgba(201, 164, 92, 0.2);
-}
-
-.trust-item-link h4 {
-    color: var(--color-accent);
-    transition: color 0.3s ease;
-}
-
-.trust-item-link:hover h4 {
-    color: var(--color-accent-dark);
-}
-
-.trust-item-link p {
-    transition: color 0.3s ease;
-}
-
-.trust-item-link:hover p {
-    color: var(--color-text);
 }
 
 /* ========================================
