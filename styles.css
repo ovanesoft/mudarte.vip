@@ -912,9 +912,21 @@ section {
 
 .trust-features {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: var(--spacing-lg);
     margin-top: var(--spacing-xl);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Make the 4th and 5th items span to center them */
+.trust-features .trust-item:nth-child(4) {
+    grid-column: 1 / 2;
+}
+
+.trust-features .trust-item:nth-child(5) {
+    grid-column: 2 / 3;
 }
 
 .trust-item {
@@ -1669,13 +1681,14 @@ section {
     }
 
     .trust-features {
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
     }
 
-    .trust-features .trust-item:nth-child(3) {
-        grid-column: 1 / -1;
-        max-width: 400px;
+    /* Reset desktop positioning for mobile */
+    .trust-features .trust-item:nth-child(4),
+    .trust-features .trust-item:nth-child(5) {
+        grid-column: auto;
     }
 
     .process-step {
