@@ -912,21 +912,9 @@ section {
 
 .trust-features {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: var(--spacing-lg);
     margin-top: var(--spacing-xl);
-    max-width: 1400px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Force 4th and 5th items to second row, centered */
-.trust-features .trust-item:nth-child(4) {
-    grid-column: 1 / 2;
-}
-
-.trust-features .trust-item:nth-child(5) {
-    grid-column: 2 / 3;
 }
 
 .trust-item {
@@ -1689,12 +1677,6 @@ section {
     .trust-features {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
-    }
-
-    /* Reset grid positioning for mobile */
-    .trust-features .trust-item:nth-child(4),
-    .trust-features .trust-item:nth-child(5) {
-        grid-column: auto;
     }
 
     .trust-item {
