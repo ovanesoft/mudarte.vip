@@ -992,12 +992,12 @@ section {
 }
 
 .trust-item-link h4 {
-    color: var(--color-primary);
+    color: var(--color-accent);
     transition: color 0.3s ease;
 }
 
 .trust-item-link:hover h4 {
-    color: var(--color-accent);
+    color: var(--color-accent-dark);
 }
 
 .trust-item-link p {
